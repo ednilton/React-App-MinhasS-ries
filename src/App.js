@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Header from './Header'
 import Generos from './componentes/generos/Generos'
 import NovoGenero from './componentes/generos/NovoGenero'
@@ -10,7 +10,7 @@ import EditarSerie from './componentes/series/EditarSerie'
 
 import {
   BrowserRouter as Router,
-  Route
+  Route, Switch
 } from 'react-router-dom'
 
 
@@ -19,14 +19,16 @@ function App() {
   return(
     <Router>
       <div>
-        <Header/>
+        <Header />
+        <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/generos' exact component={Generos} />
           <Route path='/novogenero' exact  component={NovoGenero} />
           <Route path='/generos/:id' exact  component={EditarGenero} />
-          <Route path='/series' exact  component={Series} />
+          <Route path='/series/' exact  component={Series} />
           <Route path='/novaserie' exact  component={NovaSerie} />
           <Route path='/series/:id' exact  component={EditarSerie} />
+        </Switch>
       </div>
     </Router>
   )

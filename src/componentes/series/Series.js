@@ -27,14 +27,14 @@ const deleteSerie = id => {
             <td>{record.name}</td>
             <th><button className='btn btn-outline-danger mr-md-3 btn-sm' onClick={() => deleteSerie(record.id)}>Remover</button>
             
-            <Link to={'/series/' + record.id} className='btn btn-outline-warning btn-sm' >Editar</Link></th>
+            <Link to={'/series/' + record.id} className='btn btn-outline-warning btn-sm' >Info</Link></th>
         </tr>
       )
     }
 
     if (data.length === 0) {
         return(
-            <div className='container'>
+            <div>
                 <h3>Séries</h3>
                 <Link to='/novaserie' className='btn btn-outline-primary btn-sm'>Nova série</Link>
                 

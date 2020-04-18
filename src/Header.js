@@ -20,11 +20,11 @@ const Header = () => {
   }
   return (
     /*  */
-    <div className='jumbotron jumbotron-fluid bg-info'>
+    <div>
     
       <div className='container'>
         <Navbar color='light' light expand='md'>
-          <NavbarBrand  tag={Link} to='/' >Minhas Séries</NavbarBrand>
+          <NavbarBrand  tag={Link} to='/' ><b>Minhas Séries</b></NavbarBrand>
           <NavbarToggler onClick={toggle}/>
           <Collapse isOpen={open} navbar>
             <Nav className='ml-auto' navbar>
